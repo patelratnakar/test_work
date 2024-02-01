@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fail if the branch is not main
-        if: github.ref != 'refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         run: |
           echo "This workflow should not be triggered with workflow_dispatch on a branch other than main"
           exit 1
@@ -15,5 +15,5 @@ jobs:
       - name: Print hello world
         run: echo "Hello world!"
 
-      - name: Log github context
-        run: echo "${{ toJSON(github) }}"
+      # - name: Log github context
+      #   run: echo "${{ toJSON(github) }}"
