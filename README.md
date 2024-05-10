@@ -199,7 +199,7 @@ def test\_divide\_float\_result():
 
 
 
-![](Aspose.Words.23d92daa-ac42-42b0-a447-9bbb2fafd647.003.png)
+
 
 The coverage report will display the percentage of code covered by tests, along with detailed information about which lines of code were executed during testing.
 
