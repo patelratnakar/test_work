@@ -2,11 +2,14 @@ name: External Events
 
 on:
    repository_dispatch:
-
+        types: [test, build]
 jobs:
     echo-a-string:
         runs-on: ubuntu-latest
         steps:
             - name: Echo the string
-              run: echo "Repository dispatch event received!"
+              run: |
+                echo "Repository dispatch event received!"
+                echo ${{ github.event.client_payload.message }}
+
                  
