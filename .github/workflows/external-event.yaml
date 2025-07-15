@@ -1,0 +1,12 @@
+name: External Events
+
+on:
+   repository_dispatch:
+
+jobs:
+    echo-a-string:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Echo the string
+              run: echo "Repository dispatch event received!"
+                 
